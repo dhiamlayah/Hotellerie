@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Hotel.Migrations
+namespace HotelLeries.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

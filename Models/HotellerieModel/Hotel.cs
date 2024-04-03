@@ -1,6 +1,5 @@
-﻿using System;
-
-namespace Hotel.Models.HotellerieModel
+﻿
+namespace HotelLeries.Models.HotellerieModel
 {
     public class Hotel
     {
@@ -8,6 +7,7 @@ namespace Hotel.Models.HotellerieModel
         private int etoiles;
         private string ville;
         private string siteWeb;
+        private int tel;
 
         public int Id { get; set; } // Use properties instead of public fields
 
@@ -31,9 +31,21 @@ namespace Hotel.Models.HotellerieModel
             {
                 if (value < 0 || value > 5)
                 {
-                    throw new ArgumentOutOfRangeException("Etoiles should be a number between 0 and 5.");
+                    throw new ArgumentException("Etoiles should be a number between 0 and 5.");
                 }
                 etoiles = value;
+            }
+        }
+        public int Tel
+        {
+            get { return Tel; }
+            set
+            {
+                if (value == 0)
+                {
+                    throw new ArgumentNullException("Ville should not be null.");
+                }
+                etoiles = Tel;
             }
         }
 

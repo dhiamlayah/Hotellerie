@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Hotel.Models.HotellerieModel
+namespace HotelLeries.Models.HotellerieModel
 {
     public class HotellerieDbContext: DbContext
     {
